@@ -1,0 +1,172 @@
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.btn{
+  text-decoration: none;
+}
+
+/* サイドバー */
+
+.left-wrapper{
+  width: 300px;
+  background-color: #253141;
+}
+
+/* サイドヘッダー */
+
+.side-header{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.user-name{
+  font-size: 16px;
+  color: #FAFAFA;
+}
+
+.create_chat{
+  padding: 14px;
+  border: 1px solid lightgreen;
+}
+
+.create_chat_link{
+  font-size: 10px;
+  color: deepskyblue;
+}
+
+/* サイドボディー */
+
+.side-body{
+  height: calc(100vh - 100px);
+  background-color: #2F3E51;
+  padding: 0 20px;
+  overflow: scroll;
+}
+
+.chat_room_name{
+  padding: 20px 0 40px 0;
+}
+
+.chat_room_name_link{
+  color: white;
+}
+
+/* メインバー */
+
+.right-wrapper{
+  width: calc(100vw - 300px);
+  background-color: #ffffff;
+}
+
+/* メインヘッダー */
+
+.main-header{
+  padding: 0 40px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-title{
+  font-size: 24px;
+  color: #333;
+}
+
+.chat-end{
+  padding: 20px;
+  border: 1px solid darkred;
+}
+
+.chat-end-link{
+  color: darkred;
+}
+
+/* メインボディー */
+
+.main-body{
+  padding: 0 40px;
+  padding-top: 46px;
+  height: calc(100vh - 190px);
+  background-color: #FAFAFA;
+}
+
+.message{
+  padding-top: 10px;
+  margin-bottom: 40px;
+}
+
+.message-list{
+  display: flex;
+}
+
+.message-name{
+  font-size: 16px;
+  color: #434A54;
+  margin-right: 10px;
+} 
+
+.message-date{
+  font-size: 12px;
+  color: #999;
+}
+
+.message-content{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #434A54;
+}
+
+/* フォーム */
+
+.form{
+  padding: 20px 40px;
+  height: 90px;
+  background-color: #DDDDDD;
+  display: flex;
+}
+
+.form-input{
+  display: flex;
+  width: 100%;
+  background-color: white;
+  margin-right: 15px;
+}
+
+.message-box{
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  border: none;
+}
+
+.form-image{
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+
+/* 送信ボタン */
+
+.form-send-btn{
+  height: 50px;
+  background-color: #38AEF0;
+  font-size: 16px;
+  color: white;
+  padding: 0 20px;
+  border: none;
+}
