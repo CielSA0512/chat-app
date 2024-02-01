@@ -1,6 +1,6 @@
 <div class="left-wrapper">
     <div class="side-header">
-      <div class="user-btn"><%= link_to "KEIYA", "#", class: "user-name btn" %></div>
+      <div class="user-btn"><%= link_to current_user.name, edit_user_path(current_user), class: "user-name btn" %></div>
       <div class="create_chat"><%= link_to "チャットを作成する", "#", class: "create_chat_link btn" %></div>
     </div>
     <div class="side-body">
