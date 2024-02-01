@@ -1,14 +1,15 @@
 <div class="left-wrapper">
     <div class="side-header">
       <div class="user-btn"><%= link_to current_user.name, edit_user_path(current_user), class: "user-name btn" %></div>
-      <div class="create_chat"><%= link_to "チャットを作成する", "#", class: "create_chat_link btn" %></div>
+      <div class="create_chat"><%= link_to "チャットを作成する", new_room_path , class: "create_chat_link btn" %></div>
     </div>
     <div class="side-body">
-      <div class="chat_room_name">
-        <%= link_to "techroom1", "#", class: "chat_room_name_link btn" %>
-      </div>
-      <div class="chat_room_name">
-        <%= link_to "techroom2", "#", class: "chat_room_name_link btn" %>
-      </div>
+        <% current_user.rooms.each do |room| %>
+          <div class="chat_room_name">
+            <div>
+              <a href="#" class="chat_room_name_link btn"><%= room.name %></a>
+            </div>
+          </div>
+        <% end %>
     </div>
 </div>
