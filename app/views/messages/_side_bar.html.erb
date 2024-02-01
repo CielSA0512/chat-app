@@ -1,13 +1,13 @@
 <div class="left-wrapper">
     <div class="side-header">
-      <div class="user-btn"><%= link_to current_user.name, edit_user_path(current_user), class: "user-name btn" %></div>
+      <div class="user-btn"><%= link_to current_user.name, edit_user_path(current_user),class: "user-name btn" %></div>
       <div class="create_chat"><%= link_to "チャットを作成する", new_room_path , class: "create_chat_link btn" %></div>
     </div>
     <div class="side-body">
         <% current_user.rooms.each do |room| %>
           <div class="chat_room_name">
             <div>
-              <a href="#" class="chat_room_name_link btn"><%= room.name %></a>
+              <%= link_to room.name, room_messages_path(room), class: "chat_room_name_link btn" %></a>
             </div>
           </div>
         <% end %>
