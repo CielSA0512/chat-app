@@ -1,6 +1,6 @@
 <div class="right-wrapper">
   <div class="main-header">
-    <div class="chat-title">hogefuga</div>
+    <div class="chat-title"><%= @room.name %></div>
     <div class="chat-end"><%= link_to "チャットを終了する", "#", class: "chat-end-link btn" %></div>
   </div>
   <div class="main-body">
@@ -27,14 +27,14 @@
 
   </div>
   
-  <div class="form">
+  <%= form_with model: [@room, @message], class: "form", local: true do |f| %>
     <div class="form-input">
-      <input type="text" placeholder="type a message" class="message-box">
+      <%= f.text_field :content, placeholder: "type a message", class:"message-box"%>
       <label class="form-image">
         <span class="image-file">画像<span>
-        <input type="file" class="hidden">
+        <%= f.file_field :image, class:"hidden"%>
       </label>
     </div>
-      <input type="submit" value="送信" class="form-send-btn">
-  </div>
+      <%= f.submit "送信", class: "form-send-btn" %>
+  <% end %>
 </div>
